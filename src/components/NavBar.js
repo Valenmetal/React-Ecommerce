@@ -4,6 +4,7 @@ import "../app/styles.css"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return (
@@ -17,6 +18,9 @@ const NavBar = () => {
                             <Nav.Link href="#home">Inicio</Nav.Link>
                             <Nav.Link href="#features">Productos</Nav.Link>
                             <Nav.Link href="#pricing">Faqs</Nav.Link>
+
+
+                            <CartWidget />
                         </Nav>
                     </Container>
                 </Navbar>
