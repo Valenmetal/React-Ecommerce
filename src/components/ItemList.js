@@ -1,7 +1,7 @@
 import { useState } from "react";
 import productos from "../products"
-import { ItemCount } from './ItemCount';
 import { useEffect } from "react";
+import Item from "./Item";
 
 function ItemList() {
 
@@ -18,20 +18,15 @@ function ItemList() {
 
     }, [])
 
-    const onAdd = (value) => {
-        alert(`Se han agregado ${value} items`)
-    }
+
 
     return (
         <div className="products">
             {
-                p.map((producto, id) => <div className="product" key={'producto' + id}>
-                    <h3 className="epigrafe"> {producto.name}</h3>
-                    <img className="img-product" src={producto.src} />
-                    <p className="epigrafe">${producto.price}</p>
+                p.map((producto, id) =>
+                    <Item key={'producto' + id} producto={producto} />
 
-                    <ItemCount stock={4} initial={1} onAdd={onAdd} />
-                </div>)
+                )
             }
 
         </div>

@@ -1,14 +1,22 @@
-/* import React from 'react'
+import React from 'react'
+import { ItemCount } from './ItemCount';
 
 
-function Item() {
+function Item({ producto }) {
+
+    const onAdd = (value) => {
+        alert(`Se han agregado ${value} items`)
+    }
+
     return (
-        <div>
-            <h3> {producto.name}</h3>
-            <img src="https://via.placeholder.com/150" />
-            <p>{producto.price}</p>
+        <div className="product">
+            <h3 className="epigrafe"> {producto.name}</h3>
+            <img className="img-product" src={producto.src} />
+            <p className="epigrafe">${producto.price}</p>
+
+            <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
         </div>
     )
 }
 
-export default Item */
+export default Item

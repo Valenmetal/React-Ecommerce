@@ -17,7 +17,7 @@ const productos = [
         "src": airmaxblancas,
         "category": "male",
         "price": 9000,
-        "quantity": 1
+        "stock": 5
     },
     {
         "id": 2,
@@ -26,7 +26,7 @@ const productos = [
         "src": airjordanrojas,
         "category": "male",
         "price": 9000,
-        "quantity": 1
+        "stock": 3
     },
     {
         "id": 3,
@@ -35,7 +35,7 @@ const productos = [
         "src": airjordancromadas,
         "category": "male",
         "price": 6000,
-        "quantity": 1
+        "stock": 2
     },
     {
         "id": 4,
@@ -44,7 +44,7 @@ const productos = [
         "src": airmaxnegras,
         "category": "female",
         "price": 5000,
-        "quantity": 1
+        "stock": 1
     },
     {
         "id": 5,
@@ -53,7 +53,7 @@ const productos = [
         "src": airmaxgris,
         "category": "male",
         "price": 8000,
-        "quantity": 1
+        "stock": 1
     },
     {
         "id": 6,
@@ -62,7 +62,7 @@ const productos = [
         "src": airzoomblancas,
         "category": "female",
         "price": 6000,
-        "quantity": 1
+        "stock": 1
     },
     {
         "id": 7,
@@ -71,7 +71,7 @@ const productos = [
         "src": airventureazules,
         "category": "male",
         "price": 8000,
-        "quantity": 1
+        "stock": 1
     },
     {
         "id": 8,
@@ -80,7 +80,7 @@ const productos = [
         "src": nextnature,
         "category": "female",
         "price": 8000,
-        "quantity": 1
+        "stock": 1
     }
 ]
 
