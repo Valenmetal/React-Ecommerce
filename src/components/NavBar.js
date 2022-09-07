@@ -19,7 +19,6 @@ const NavBar = () => {
                             <Nav.Link href="#features">Productos</Nav.Link>
                             <Nav.Link href="#pricing">Faqs</Nav.Link>
 
-
                             <CartWidget />
                         </Nav>
                     </Container>

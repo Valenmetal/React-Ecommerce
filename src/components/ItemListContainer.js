@@ -1,11 +1,11 @@
 import React from 'react'
+import ItemList from './ItemList'
 
 function ItemListContainer() {
+
     return (
         <>
-            <h3>
-                Welcome
-            </h3>
+            <ItemList />
         </>
     )
 }
