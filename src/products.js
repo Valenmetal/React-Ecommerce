@@ -1,4 +1,3 @@
-import React from "react";
 import airmaxblancas from "./assets/img/Air-Max1.png";
 import airjordanrojas from "./assets/img/Air-Jordan2.png";
 import airjordancromadas from "./assets/img/Air-Jordan3.png";

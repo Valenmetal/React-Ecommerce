@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "../app/styles.css"
 
-export function ItemCount({ stock, initial, onAdd }) {
+function ItemCount({ stock, initial, onAdd }) {
     const [value, setValue] = useState(1)
 
     return (
-        <div>
+        <div className="centered">
             <div className="container-precios">
                 <button className="btnValue" onClick={() => {
                     value > initial
@@ -32,3 +32,4 @@ export function ItemCount({ stock, initial, onAdd }) {
         </div>
     )
 }
+export default ItemCount

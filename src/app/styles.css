@@ -213,6 +213,19 @@ body h2 {
   justify-content: center;
 }
 
+.productDetail {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+  width: 50vw;
+  background-color: rgba(11, 11, 11, 0.835);
+}
+
+.img-detail-product {
+  border-radius: 10px;
+  background-color: #eee
+}
+
 .products,
 .categories {
   display: grid;
@@ -541,6 +554,11 @@ footer {
   border-radius: 15px;
   color: rgb(9, 8, 9);
   background-color: rgba(98, 49, 129, 0.729);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
 }
 
 .addCartBtn {

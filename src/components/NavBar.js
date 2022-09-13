@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -13,11 +14,27 @@ const NavBar = () => {
             <>
                 <Navbar bg="dark" variant="dark">
                     <Container>
-                        <Navbar.Brand href="#home">SM Indumentaria</Navbar.Brand>
+                        <Navbar.Brand>SM Indumentaria</Navbar.Brand>
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Inicio</Nav.Link>
-                            <Nav.Link href="#features">Productos</Nav.Link>
-                            <Nav.Link href="#pricing">Faqs</Nav.Link>
+
+                            <Nav.Link>
+                                <Link to="/">
+                                    Inicio
+                                </Link>
+                            </Nav.Link>
+
+
+                            <Nav.Link>
+                                Productos
+                            </Nav.Link>
+
+
+
+                            <Nav.Link>
+                                <Link to="/categorias">
+                                    Categorias
+                                </Link>
+                            </Nav.Link>
 
                             <CartWidget />
                         </Nav>

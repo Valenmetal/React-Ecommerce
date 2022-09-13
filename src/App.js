@@ -1,15 +1,11 @@
-import NavBar from "./components/NavBar";
 import "./app/styles.css"
-import ItemListContainer from "./components/ItemListContainer";
+import Router from "./app/Router";
 
 
 function App() {
   return (
     <div className="index__grid-container">
-      <div>
-        <NavBar />
-        <ItemListContainer />
-      </div>
+      <Router />
     </div>
   );
 }
