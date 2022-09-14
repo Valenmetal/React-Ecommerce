@@ -1,4 +1,5 @@
-import React from 'react'
+
+import { Link } from 'react-router-dom'
 
 
 function Item({ producto }) {
@@ -11,7 +12,9 @@ function Item({ producto }) {
             <p className="epigrafe">${producto.price}</p>
 
             <div className="centered">
-                <button className="addCartBtn"> Mas detalles </button>
+                <Link to={`/product/${producto.id}`}>
+                    <button className="addCartBtn"> Mas detalles </button>
+                </Link>
             </div>
         </div>
     )

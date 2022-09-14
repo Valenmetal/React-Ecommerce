@@ -1,4 +1,3 @@
-import React from 'react'
 import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {

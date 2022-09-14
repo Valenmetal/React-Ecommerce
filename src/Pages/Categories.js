@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import categoryList from '../categories'
-import productos from '../products';
-import ItemCount from '../components/ItemCount';
 
 
 const Categories = () => {
 
     const [c, setC] = useState([])
-
 
     useEffect(() => {
 
@@ -15,31 +13,7 @@ const Categories = () => {
             fetch('../categories.js')
                 .then(setC(categoryList))
         }, 500);
-
-
     }, [])
-
-    const filtrar = (id) => {
-        console.log(id)
-        if (id === 0) {
-            let filtrado = productos.filter(e => e.category === "male")
-            let final = filtrado.map(e => {
-                return (
-                    <div className='product'>
-                        <p className="epigrafe">{e.name}</p>
-                        <img alt={e.description} src={e.src} className="img-product" />
-                        <p className="epigrafe">{e.price}</p>
-                        <ItemCount />
-                    </div>)
-            })
-            setC(final)
-        } else {
-
-        }
-
-
-    }
-
 
 
     return (
@@ -60,7 +34,9 @@ const Categories = () => {
                                 <img alt="categoria" className="img-product" src={category.src} />
 
                                 <div className="centered">
-                                    <button id={id} onClick={(e) => { filtrar(e.id) }} className="addCartBtn"> Elegir </button>
+                                    <Link to={`/categorias/${category.category}`}>
+                                        <button className="addCartBtn"> Elegir </button>
+                                    </Link>
                                 </div>
                             </div>
 
