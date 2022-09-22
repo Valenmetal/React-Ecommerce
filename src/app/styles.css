@@ -119,6 +119,7 @@ body h2 {
 /* CSS */
 /* CSS */
 /* CSS */
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #634a7f;
@@ -453,6 +454,7 @@ body h2 {
 }
 
 .total_container .btn_comprar {
+  color: #212121;
   width: 10vw;
   background-color: rgba(34, 113, 38, 0.924);
   border-radius: 2vw;
@@ -460,14 +462,6 @@ body h2 {
   font-family: 'Roboto', sans-serif;
 }
 
-/* .btnChangeUnits{
-
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    color: map-get($color, soft-white);
-    background-color: rgba(98, 49, 129, 0.738);
-} */
 /* US */
 /* US */
 /* US */

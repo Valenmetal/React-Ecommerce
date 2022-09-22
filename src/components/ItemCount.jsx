@@ -2,31 +2,31 @@ import { useState } from "react";
 import "../app/styles.css"
 
 function ItemCount({ stock, initial, onAdd }) {
-    const [value, setValue] = useState(1)
+    const [quantity, setQuantity] = useState(1)
 
     return (
         <div className="centered">
             <div className="container-precios">
                 <button className="btnValue" onClick={() => {
-                    value > initial
-                        ? setValue(value - 1)
-                        : setValue(value)
+                    quantity > initial
+                        ? setQuantity(quantity - 1)
+                        : setQuantity(quantity)
 
                 }}> - </button>
 
-                <p className="value">{value}</p>
+                <p className="value">{quantity}</p>
 
                 <button className="btnValue" onClick={() => {
-                    value < stock
-                        ? setValue(value + 1)
-                        : setValue(value)
+                    quantity < stock
+                        ? setQuantity(quantity + 1)
+                        : setQuantity(quantity)
 
                 }}> + </button>
             </div>
 
             <div className="precios">
 
-                <button className="addCartBtn" onClick={() => { onAdd(value) }}>Add to Cart</button>
+                <button className="addCartBtn" onClick={() => { onAdd(quantity) }}>Add to Cart</button>
             </div>
 
         </div>
