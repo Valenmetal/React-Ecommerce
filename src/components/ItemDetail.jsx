@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import productos from "../products";
 import ItemCount from "./ItemCount"
 import { Link, useParams } from "react-router-dom";
 import { useCartContext } from '../context/CartContext';
+import { getItems } from "../app/api";
 
 function ItemDetail() {
 
@@ -22,15 +22,8 @@ function ItemDetail() {
     }
 
     useEffect(() => {
-
-        setTimeout(() => {
-            fetch('../products.js')
-                .then(() => {
-                    setP(productos[prod - 1])
-                })
-        }, 500);
-
-
+        getItems()
+            .then(items => setP(items[prod - 1]))
     }, [])
 
     return (

@@ -12,7 +12,7 @@ function Item({ producto }) {
             <p className="epigrafe">${producto.price}</p>
 
             <div className="centered">
-                <Link to={`/product/${producto.id}`}>
+                <Link to={`/product/${producto.identificator}`}>
                     <button className="addCartBtn"> Mas detalles </button>
                 </Link>
             </div>

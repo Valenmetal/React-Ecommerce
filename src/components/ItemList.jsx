@@ -1,8 +1,8 @@
 import { useState } from "react";
-import productos from "../products"
 import { useEffect } from "react";
 import Item from "./Item";
 import { useParams } from 'react-router-dom';
+import { getItems } from '../app/api';
 
 function ItemList() {
 
@@ -11,26 +11,19 @@ function ItemList() {
     const { categoryId } = useParams()
 
     useEffect(() => {
-
-        setTimeout(() => {
-            fetch('../products.js')
-                .then(setP(productos))
-        }, 500);
+        getItems()
+            .then(items => setP(items))
     }, [])
 
     useEffect(() => {
 
-        setTimeout(() => {
-
-            if (categoryId) {
-                fetch('../products.js')
-                    .then(setP(productos.filter(producto => producto.category === categoryId)))
-            } else {
-                fetch('../products.js')
-                    .then(setP(productos))
-            }
-
-        }, 500);
+        if (categoryId) {
+            getItems()
+                .then(items => setP(items.filter(item => item.category === categoryId)))
+        } else {
+            getItems()
+                .then(items => setP(items))
+        }
 
     }, [])
 

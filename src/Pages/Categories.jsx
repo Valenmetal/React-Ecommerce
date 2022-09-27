@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import categoryList from '../categories'
+import { getCategory } from '../app/api';
 
 
 const Categories = () => {
@@ -9,10 +9,8 @@ const Categories = () => {
 
     useEffect(() => {
 
-        setTimeout(() => {
-            fetch('../categories.js')
-                .then(setC(categoryList))
-        }, 500);
+        getCategory()
+            .then(category => setC(category))
     }, [])
 
 
