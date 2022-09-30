@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getCategory } from '../app/api';
-
+import React from 'react'
 
 const Categories = () => {
 

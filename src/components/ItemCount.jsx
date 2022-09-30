@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../app/styles.css"
 
 function ItemCount({ stock, initial, onAdd }) {

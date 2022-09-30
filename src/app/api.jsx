@@ -1,6 +1,5 @@
-import { collection, getDocs, query, doc, getDoc, updateDoc, where, setDoc, deleteDoc, addDoc, } from "firebase/firestore";
+import { collection, getDocs, query, doc, getDoc, updateDoc, where, addDoc, /*  setDoc, deleteDoc,*/ } from "firebase/firestore";
 import { db } from './firebase';
-
 
 export const getItemById = async (id) => {
     const colRef = collection(db, 'items');
@@ -28,16 +27,16 @@ export const getItems = async () => {
 // Tener en cuenta que el tipo de dato de la condición debe coincidir con el tipo de dato que hay en Firebase o no obtendré un dato de respuesta
 export const getItemsByCondition = async (value) => {
     const colRef = collection(db, 'items');
-    const result = await getDocs(query(colRef, where('age', '==', value)));
+    const result = await getDocs(query(colRef, where('identificator', '==', value)));
     return getArrayFromCollection(result);
 }
 
-/* // CREATE
-export const createItem = async (obj) => {
-    const colRef = collection(db, 'items');
+// CREATE AN ORDER
+export const createOrder = async (obj) => {
+    const colRef = collection(db, 'orders');
     const data = await addDoc(colRef, obj);
     return data.id;
-} */
+}
 
 /* 
 // DELETE

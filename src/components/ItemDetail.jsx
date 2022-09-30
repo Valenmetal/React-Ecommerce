@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ItemCount from "./ItemCount"
 import { Link, useParams } from "react-router-dom";
 import { useCartContext } from '../context/CartContext';
-import { getItems } from "../app/api";
+import { getItemById } from '../app/api';
 
 function ItemDetail() {
 
-    const [p, setP] = useState([])
+    const [p, setP] = useState({})
 
     const { addProduct, cart } = useCartContext()
 
@@ -18,12 +18,13 @@ function ItemDetail() {
     const onAdd = (quantity) => {
         setShow(false)
         addProduct(p, quantity)
-        console.log(`Se han agregado ${quantity} items`)
     }
 
     useEffect(() => {
-        getItems()
-            .then(items => setP(items[prod - 1]))
+        getItemById(prod)
+            .then(item => {
+                setP(item);
+            })
     }, [])
 
     return (
@@ -32,14 +33,13 @@ function ItemDetail() {
             {
                 <div className="productDetail">
                     <h3 className="epigrafe"> {p.name}</h3>
-                    <img className="img-detail-product" src={p.src} />
+                    <img alt={p.name} className="img-detail-product" src={p.src} />
                     <p className="epigrafe">${p.price}</p>
 
                     {
                         show
                             ? <ItemCount stock={p.stock} initial={1} onAdd={onAdd} />
-                            : <Link to="/cart"><button className="addCartBtn" onClick={() => console.log(cart)
-                            }>Finalizar compra</button></Link>
+                            : <Link to="/cart"><button className="addCartBtn">Finalizar compra</button></Link>
                     }
                 </div>
             }

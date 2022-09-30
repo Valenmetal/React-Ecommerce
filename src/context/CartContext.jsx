@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react'
+import React, { createContext, useState, useContext } from 'react'
 
 const CartContext = createContext();
 export const useCartContext = () => useContext(CartContext);
@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
 
     const addProduct = (item, quantity) => {
         let newCart;
-        let product = cart.find(prod => prod.id === item.id)
+        let product = cart.find(prod => prod.identificator === item.identificator);
         if (product) {
             product.quantity += quantity
             newCart = [...cart]

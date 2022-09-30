@@ -6,6 +6,7 @@ import Categories from "../Pages/Categories"
 import ItemDetail from '../components/ItemDetail'
 import Cart from "../Pages/Cart"
 import { CartProvider } from '../context/CartContext';
+import React from 'react'
 
 const Router = () => {
     return (
