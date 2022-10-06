@@ -4,10 +4,13 @@ import Item from "./Item";
 import { useParams } from 'react-router-dom';
 import { getItems } from '../app/api';
 import React from 'react'
+import { Orbit } from '@uiball/loaders'
+
+
 
 function ItemList() {
 
-    const [p, setP] = useState([])
+    const [p, setP] = useState()
 
     const { categoryId } = useParams()
 
@@ -15,6 +18,8 @@ function ItemList() {
         getItems()
             .then(items => setP(items))
     }, [])
+
+
 
     useEffect(() => {
 
@@ -29,15 +34,23 @@ function ItemList() {
     }, [])
 
     return (
-        <div className="products">
-            {
-                p.map((producto, id) =>
-                    <Item key={'producto' + id} producto={producto} />
+        <>{p ?
+            <div className="products">
+                {
+                    p.map((producto, id) =>
+                        <Item key={'producto' + id} producto={producto} />)
+                }
 
-                )
-            }
-
-        </div>
+            </div>
+            :
+            <div className="loader">
+                <Orbit
+                    size={35}
+                    speed={1.5}
+                    color="white"
+                /></div>
+        }
+        </>
     )
 }
 

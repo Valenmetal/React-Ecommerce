@@ -1,47 +1,48 @@
-import "../assets/logos/SmINDUMENTARIA.png"
-import "../app/styles.css"
+import logo from '../assets/logos/SmINDUMENTARIA.png'
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 import React from 'react'
+
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 const NavBar = () => {
     return (
 
         <header>
-            <>
-                <Navbar bg="dark" variant="dark">
-                    <Container>
-                        <Navbar.Brand>SM Indumentaria</Navbar.Brand>
-                        <Nav className="me-auto">
+            <Navbar fixed='top' className="navbar w-100 m-0" bg="black" variant="dark">
+                <Navbar.Brand href="/" className='ms-5'>
+                    <Link className="link" to="/">
+                        <img
+                            src={logo}
+                            width="80"
+                            height="80"
+                            alt="Logo"
+                        />
+                    </Link>
+                </Navbar.Brand>
+                <Nav>
 
-                            <Nav.Link>
-                                <Link to="/">
-                                    Inicio
-                                </Link>
-                            </Nav.Link>
+                    <Nav.Link className="me-auto">
+                        <Link className="nav-link" to="/">
+                            Inicio
+                        </Link>
+                    </Nav.Link>
 
+                    <Nav.Link className="me-auto">
+                        <Link className="nav-link" to="/categorias">
+                            Categorias
+                        </Link>
+                    </Nav.Link>
 
-                            <Nav.Link>
-                                Productos
-                            </Nav.Link>
+                </Nav>
+                <Nav className='me-5'>
+                    <CartWidget />
 
+                </Nav>
+            </Navbar>
 
-
-                            <Nav.Link>
-                                <Link to="/categorias">
-                                    Categorias
-                                </Link>
-                            </Nav.Link>
-
-                            <CartWidget />
-                        </Nav>
-                    </Container>
-                </Navbar>
-
-            </>
         </header>
     )
 }

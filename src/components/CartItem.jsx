@@ -7,15 +7,14 @@ const CartItem = ({ product }) => {
 
     return (
         <>
-            <div className='productInCart'>
-                <div className="prod_in_cart" id={product.id}>
-                    <p className="epigrafe" id="name">{product.name}</p>
-                    <img alt={product.name} src={product.src} className="img-product-cart" />
-                    <div className="epigrafe-container">
-                        <p className="epigrafe" id="price">${product.price}</p>
-                        <button className="remove_prod_cart" onClick={() => removeItem(product.id)}>Eliminar</button>
-                        <p className="cantidad">Cantidad: {product.quantity}</p>
-                    </div>
+
+            <div className="prod_in_cart" id={product.id}>
+                <p className="name_in_cart" id="name">{product.name}</p>
+                <img alt={product.name} src={product.src} className="img-product-cart" />
+                <p className="epigrafe" id="price">${product.price}</p>
+                <div className="epigrafe-container">
+                    <button className="remove_prod_cart" onClick={() => removeItem(product.id)}>Eliminar</button>
+                    <p className="cantidad">Cantidad: {product.quantity}</p>
                 </div>
             </div>
 

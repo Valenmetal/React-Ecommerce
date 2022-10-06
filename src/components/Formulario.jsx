@@ -67,8 +67,8 @@ const Formulario = () => {
 
                 {({ errors }) => (
                     <Form>
-                        <div>
-                            <label htmlFor="nombre">Nombre</label>
+                        <div className='form_input'>
+                            <label htmlFor="nombre">Nombre:</label>
                             <Field
                                 type="text"
                                 id="nombre"
@@ -77,12 +77,12 @@ const Formulario = () => {
                             />
 
                             <ErrorMessage name='nombre' component={(() => (
-                                <div className=''>{errors.nombre}</div>
+                                <div className='error'>{errors.nombre}</div>
                             ))} />
 
                         </div>
-                        <div>
-                            <label htmlFor="email">Email</label>
+                        <div className='form_input'>
+                            <label htmlFor="email">Email:</label>
                             <Field
                                 type="email"
                                 id="email"
@@ -91,12 +91,12 @@ const Formulario = () => {
                             />
 
                             <ErrorMessage name='email' component={(() => (
-                                <div className=''>{errors.email}</div>
+                                <div className='error'>{errors.email}</div>
                             ))} />
 
                         </div>
-                        <div>
-                            <label htmlFor="telefono">Telefono</label>
+                        <div className='form_input'>
+                            <label htmlFor="telefono">Telefono:</label>
                             <Field
                                 type="text"
                                 id="telefono"
@@ -105,16 +105,16 @@ const Formulario = () => {
                             />
 
                             <ErrorMessage name='telefono' component={(() => (
-                                <div className=''>{errors.telefono}</div>
+                                <div className='error'>{errors.telefono}</div>
                             ))} />
 
                         </div>
 
                         <div className="centered">
-                            <button className='btnComprar' type="submit">Comprar</button>
                             <button className='deleteCartBtn' onClick={() => clearCart()}>Vaciar Carrito</button>
-                            {formSent && <p className=''>Comprado</p>}
+                            <button className='btnComprar' type="submit">Comprar</button>
                         </div>
+                        {formSent && <p className='exito'>Comprado!</p>}
                     </Form>
                 )}
 

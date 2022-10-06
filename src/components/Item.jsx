@@ -9,7 +9,7 @@ function Item({ producto }) {
         <div className="product">
             <h3 className="epigrafe"> {producto.name}</h3>
             <img alt={producto.name} className="img-product" src={producto.src} />
-            <p className="epigrafe">${producto.price}</p>
+            <p className="epigrafe_price">${producto.price}</p>
 
             <div className="centered">
                 <Link to={`/product/${producto.id}`}>
