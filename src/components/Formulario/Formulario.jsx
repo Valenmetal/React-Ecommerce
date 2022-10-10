@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import React, { useState } from 'react'
-import { useCartContext } from '../context/CartContext';
-import { createOrder } from '../app/api';
+import { useCartContext } from '../../context/CartContext';
+import { createOrder } from '../../app/api';
 
 
 const Formulario = () => {

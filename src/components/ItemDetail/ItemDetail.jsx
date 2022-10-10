@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ItemCount from "./ItemCount"
 import { Link, useParams } from "react-router-dom";
-import { useCartContext } from '../context/CartContext';
-import { getItemById } from '../app/api';
+import { useCartContext } from '../../context/CartContext';
+import { getItemById } from '../../app/api';
 import { Orbit } from '@uiball/loaders';
 
 function ItemDetail() {
