@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import ItemListContainer from "../components/ItemListContainer"
-import ItemList from "../components/ItemList"
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
+import ItemList from "../components/ItemList/ItemList"
 import Layout from "./Layout"
 import Categories from "../Pages/Categories"
-import ItemDetail from '../components/ItemDetail'
+import ItemDetail from '../components/ItemDetail/ItemDetail'
 import Cart from "../Pages/Cart"
 import { CartProvider } from '../context/CartContext';
 import React from 'react'

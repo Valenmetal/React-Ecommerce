@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../app/styles.css"
+import "../../app/styles.css"
 
 function ItemCount({ stock, initial, onAdd }) {
     const [quantity, setQuantity] = useState(1)

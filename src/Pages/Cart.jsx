@@ -1,5 +1,5 @@
-import CartItem from '../components/CartItem';
-import Formulario from '../components/Formulario';
+import CartItem from '../components/CartItem/CartItem';
+import Formulario from '../components/Formulario/Formulario';
 import { useCartContext } from '../context/CartContext';
 import React from 'react'
 import { Orbit } from '@uiball/loaders';

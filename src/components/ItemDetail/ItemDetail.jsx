@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemCount from "./ItemCount"
+import ItemCount from "../ItemCount/ItemCount"
 import { Link, useParams } from "react-router-dom";
 import { useCartContext } from '../../context/CartContext';
 import { getItemById } from '../../app/api';
