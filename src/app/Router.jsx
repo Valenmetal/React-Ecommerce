@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import ItemList from "../components/ItemList/ItemList"
 import Layout from "./Layout"
@@ -10,7 +10,7 @@ import React from 'react'
 
 const Router = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <CartProvider>
                 <Routes>
                     <Route element={<Layout />}>
@@ -24,7 +24,7 @@ const Router = () => {
                     </Route>
                 </Routes>
             </CartProvider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
