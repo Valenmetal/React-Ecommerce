@@ -14,7 +14,7 @@ function Footer() {
 
             <div className="footer-content">
 
-                <p className='author'>Valentino Geronzi</p>
+                <p className="author">Valentino Geronzi</p>
 
                 <button className="btn-social">
                     <span>Redes</span>
